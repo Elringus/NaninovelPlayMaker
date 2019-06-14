@@ -9,11 +9,17 @@ namespace Naninovel.PlayMaker
         [UIHint(UIHint.FsmString)]
         public FsmString ScriptName;
 
+        [Tooltip("The label inside the target script from which to start the playback (optional).")]
+        [UIHint(UIHint.FsmString)]
+        public FsmString Label;
+
         [Tooltip("Event sent when the script has started playing.")]
         public FsmEvent DoneEvent;
 
         public override void Reset ()
         {
+            ScriptName = null;
+            Label = null;
             DoneEvent = null;
         }
 
@@ -32,7 +38,8 @@ namespace Naninovel.PlayMaker
         private async void PreloadAndPlayScriptAsync ()
         {
             var player = Engine.GetService<ScriptPlayer>();
-            await player.PreloadAndPlayAsync(ScriptName.Value);
+            var label = string.IsNullOrWhiteSpace(Label?.Value) ? null : Label.Value;
+            await player.PreloadAndPlayAsync(ScriptName.Value, label: label);
 
             Fsm.Event(DoneEvent);
             Finish();
