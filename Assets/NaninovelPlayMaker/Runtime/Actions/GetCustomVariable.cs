@@ -1,4 +1,5 @@
 ﻿using HutongGames.PlayMaker;
+using System.Globalization;
 
 namespace Naninovel.PlayMaker
 {
@@ -9,14 +10,29 @@ namespace Naninovel.PlayMaker
         [UIHint(UIHint.FsmString)]
         public FsmString VariableName;
 
-        [Tooltip("The retrieved value of the variable.")]
+        [Tooltip("The retrieved string value of the variable.")]
         [UIHint(UIHint.Variable)]
-        public FsmString VariableValue;
+        public FsmString StringVariableValue;
+
+        [Tooltip("The retrieved float value of the variable.")]
+        [UIHint(UIHint.Variable)]
+        public FsmFloat FloatVariableValue;
+
+        [Tooltip("The retrieved int value of the variable.")]
+        [UIHint(UIHint.Variable)]
+        public FsmInt IntVariableValue;
+
+        [Tooltip("The retrieved bool value of the variable.")]
+        [UIHint(UIHint.Variable)]
+        public FsmBool BoolVariableValue;
 
         public override void Reset ()
         {
             VariableName = null;
-            VariableValue = null;
+            StringVariableValue = null;
+            FloatVariableValue = null;
+            IntVariableValue = null;
+            BoolVariableValue = null;
         }
 
         public override void OnEnter ()
@@ -24,7 +40,14 @@ namespace Naninovel.PlayMaker
             var customVarManager = Engine.GetService<CustomVariableManager>();
             if (customVarManager is null) { Finish(); return; }
 
-            VariableValue.Value = customVarManager.GetVariableValue(VariableName.Value);
+            StringVariableValue.Value = customVarManager.GetVariableValue(VariableName.Value);
+
+            if (!string.IsNullOrEmpty(StringVariableValue.Value) && float.TryParse(StringVariableValue.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var floatValue))
+                FloatVariableValue.Value = floatValue;
+            if (!string.IsNullOrEmpty(StringVariableValue.Value) && int.TryParse(StringVariableValue.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var intValue))
+                IntVariableValue.Value = intValue;
+            if (!string.IsNullOrEmpty(StringVariableValue.Value) && bool.TryParse(StringVariableValue.Value, out var boolValue))
+                BoolVariableValue.Value = boolValue;
         }
     }
 }
