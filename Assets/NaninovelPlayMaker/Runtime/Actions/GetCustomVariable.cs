@@ -44,7 +44,7 @@ namespace Naninovel.PlayMaker
 
             if (!string.IsNullOrEmpty(StringVariableValue.Value) && float.TryParse(StringVariableValue.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var floatValue))
                 FloatVariableValue.Value = floatValue;
-            if (!string.IsNullOrEmpty(StringVariableValue.Value) && int.TryParse(StringVariableValue.Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var intValue))
+            if (!string.IsNullOrEmpty(StringVariableValue.Value) && int.TryParse(StringVariableValue.Value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var intValue))
                 IntVariableValue.Value = intValue;
             if (!string.IsNullOrEmpty(StringVariableValue.Value) && bool.TryParse(StringVariableValue.Value, out var boolValue))
                 BoolVariableValue.Value = boolValue;
