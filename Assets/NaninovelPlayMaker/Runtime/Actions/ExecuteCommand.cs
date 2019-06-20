@@ -23,7 +23,7 @@ namespace Naninovel.PlayMaker
         {
             if (string.IsNullOrEmpty(CommandText.Value)) { Finish(); return; }
 
-            var scriptLine = new CommandScriptLine(string.Empty, 0, CommandText.Value, null);
+            var scriptLine = new CommandScriptLine(string.Empty, 0, CommandText.Value, null, false);
             if (scriptLine is null) { Finish(); return; }
 
             var command = Commands.Command.FromScriptLine(scriptLine);

@@ -48,6 +48,8 @@ namespace Naninovel.PlayMaker
                 IntVariableValue.Value = intValue;
             if (!string.IsNullOrEmpty(StringVariableValue.Value) && bool.TryParse(StringVariableValue.Value, out var boolValue))
                 BoolVariableValue.Value = boolValue;
+
+            Finish();
         }
     }
 }
