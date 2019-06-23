@@ -412,10 +412,76 @@ MonoBehaviour:
         - sendToUnityLog
         paramDataPos: 000000000000000004000000
         paramByteDataSize: 040000000000000001000000
+    - name: State 5
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 234.72224
+        y: 276.38898
+        width: 343
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.DebugLog
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 9c59e501
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: OnSaveStart
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000000001
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 070000001200000001000000
+        paramName:
+        - logLevel
+        - text
+        - sendToUnityLog
+        paramDataPos: 000000000000000004000000
+        paramByteDataSize: 040000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
+    - name: Naninovel/StateManager/OnGameSaveStarted
+      isSystemEvent: 0
+      isGlobal: 1
     - name: Test
       isSystemEvent: 0
       isGlobal: 1
@@ -425,6 +491,14 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 1
       toState: State 4
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: Naninovel/StateManager/OnGameSaveStarted
+        isSystemEvent: 0
+        isGlobal: 1
+      toState: State 5
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
