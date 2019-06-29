@@ -2,4 +2,9 @@ Hello World!
 # TestLabel
 Text after label.
 @playmaker Test
+Sent test global event.
+@playmaker TestObject object:TestObject
+Sent test object event.
+@playmaker TestName fsm:TestName
+Sent test name event.
 @stop
