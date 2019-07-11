@@ -30,7 +30,10 @@ namespace Naninovel.PlayMaker
         public override Task ExecuteAsync ()
         {
             if (FsmNames is null && GameObjectNames is null)
+            {
                 PlayMakerFSM.BroadcastEvent(EventName);
+                return Task.CompletedTask;
+            }
 
             var fsmNames = FsmNames?.ToList();
             var objectNames = GameObjectNames?.ToList();
