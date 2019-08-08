@@ -1,5 +1,6 @@
 ﻿using Naninovel.Commands;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Naninovel.PlayMaker
@@ -27,7 +28,7 @@ namespace Naninovel.PlayMaker
         [CommandParameter("object", true)]
         public string[] GameObjectNames { get => GetDynamicParameter<string[]>(null); set => SetDynamicParameter(value); }
 
-        public override Task ExecuteAsync ()
+        public override Task ExecuteAsync (CancellationToken cancellationToken)
         {
             if (FsmNames is null && GameObjectNames is null)
             {
@@ -47,7 +48,5 @@ namespace Naninovel.PlayMaker
 
             return Task.CompletedTask;
         }
-
-        public override Task UndoAsync () => Task.CompletedTask;
     }
 }

@@ -31,6 +31,10 @@ namespace Naninovel.PlayMaker
             var scriptPlayer = Engine.GetService<ScriptPlayer>();
             scriptPlayer.OnPlay += () => PlayMakerFSM.BroadcastEvent("Naninovel/ScriptPlayer/OnPlay");
             scriptPlayer.OnStop += () => PlayMakerFSM.BroadcastEvent("Naninovel/ScriptPlayer/OnStop");
+
+            var printerManager = Engine.GetService<TextPrinterManager>();
+            printerManager.OnPrintTextStarted += _ => PlayMakerFSM.BroadcastEvent("Naninovel/TextPrinterManager/OnPrintTextStarted");
+            printerManager.OnPrintTextFinished += _ => PlayMakerFSM.BroadcastEvent("Naninovel/TextPrinterManager/OnPrintTextFinished");
         }
     }
 }
