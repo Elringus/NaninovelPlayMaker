@@ -35,6 +35,9 @@ namespace Naninovel.PlayMaker
             var printerManager = Engine.GetService<TextPrinterManager>();
             printerManager.OnPrintTextStarted += _ => PlayMakerFSM.BroadcastEvent("Naninovel/TextPrinterManager/OnPrintTextStarted");
             printerManager.OnPrintTextFinished += _ => PlayMakerFSM.BroadcastEvent("Naninovel/TextPrinterManager/OnPrintTextFinished");
+
+            var localizationManager = Engine.GetService<LocalizationManager>();
+            localizationManager.OnLocaleChanged += _ => PlayMakerFSM.BroadcastEvent("Naninovel/LocalizationManager/OnLocaleChanged");
         }
     }
 }
