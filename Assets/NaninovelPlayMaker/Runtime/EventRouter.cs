@@ -13,8 +13,8 @@ namespace Naninovel.PlayMaker
             if (Engine.IsInitialized) HandleEngineInitialized();
             else
             {
-                Engine.OnInitialized -= HandleEngineInitialized;
-                Engine.OnInitialized += HandleEngineInitialized;
+                Engine.OnInitializationFinished -= HandleEngineInitialized;
+                Engine.OnInitializationFinished += HandleEngineInitialized;
             }
         }
 
