@@ -18,6 +18,6 @@ MonoBehaviour:
   InitializeOnApplicationLoad: 0
   ShowInitializationUI: 1
   CustomInitializationUI: {fileID: 0}
-  ShowTitleUI: 1
+  ShowTitleUI: 0
   EnableDevelopmentConsole: 1
   ToggleConsoleKey: 96

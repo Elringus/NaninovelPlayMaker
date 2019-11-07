@@ -15,9 +15,9 @@ MonoBehaviour:
   resourceCategories:
   - Id: Scripts
     Resources:
-    - Name: Script
+    - Name: TestScript
       PathPrefix: Scripts
-      Guid: 5e8a4a6fecf85fa48920944ff5b7673d
+      Guid: fc665eb8d8866d645ad003e58ebf4228
   - Id: Audio
     Resources:
     - Name: Keystroke
