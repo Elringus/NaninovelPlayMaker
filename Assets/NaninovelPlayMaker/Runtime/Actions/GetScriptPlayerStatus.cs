@@ -55,10 +55,10 @@ namespace Naninovel.PlayMaker
             var player = Engine.GetService<ScriptPlayer>();
             if (player is null) { Finish(); return; }
 
-            IsPlaying.Value = player.IsPlaying;
-            IsSkipActive.Value = player.IsSkipActive;
-            IsAutoPlayActive.Value = player.IsAutoPlayActive;
-            IsWaitingForInput.Value = player.IsWaitingForInput;
+            IsPlaying.Value = player.Playing;
+            IsSkipActive.Value = player.SkipActive;
+            IsAutoPlayActive.Value = player.AutoPlayActive;
+            IsWaitingForInput.Value = player.WaitingForInput;
             PlayedScriptName.Value = player.PlayedScript?.Name;
             PlayedCommandId.Value = player.PlayedCommand?.GetType()?.Name;
             PlayedCommandIndex.Value = player.PlayedIndex;

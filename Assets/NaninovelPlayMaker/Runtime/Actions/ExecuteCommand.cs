@@ -1,4 +1,5 @@
 ﻿using HutongGames.PlayMaker;
+using UnityCommon;
 
 namespace Naninovel.PlayMaker
 {
@@ -23,11 +24,9 @@ namespace Naninovel.PlayMaker
         {
             if (string.IsNullOrEmpty(CommandText.Value)) { Finish(); return; }
 
-            var scriptLine = new CommandScriptLine(string.Empty, 0, CommandText.Value, null, false);
-            if (scriptLine is null) { Finish(); return; }
-
-            var command = Commands.Command.FromScriptLine(scriptLine);
-            if (command is null) { Finish(); return; }
+            var commandBodyText = CommandText.Value.GetAfterFirst(CommandScriptLine.IdentifierLiteral).Trim();
+            var command = Commands.Command.FromScriptText(string.Empty, 0, 0, commandBodyText, out var errors);
+            if (command is null || !string.IsNullOrEmpty(errors)) { Finish(); return; }
 
             if (command.ShouldExecute)
                 await command.ExecuteAsync();

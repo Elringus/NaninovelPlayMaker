@@ -18,8 +18,3 @@ MonoBehaviour:
     - Name: TestScript
       PathPrefix: Scripts
       Guid: fc665eb8d8866d645ad003e58ebf4228
-  - Id: Audio
-    Resources:
-    - Name: Keystroke
-      PathPrefix: Audio
-      Guid: 9ee70ddbb15eb6e4aae42c0901ed5bbc

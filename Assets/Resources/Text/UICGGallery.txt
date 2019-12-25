@@ -1,0 +1,1 @@
+Naninovel.UI.CGGalleryReturnButton.LabelText: RETURN

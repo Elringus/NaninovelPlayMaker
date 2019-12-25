@@ -15,29 +15,29 @@ namespace Naninovel.PlayMaker
         /// <summary>
         /// Name of the event to broadcast.
         /// </summary>
-        [CommandParameter(NamelessParameterAlias)]
-        public string EventName { get => GetDynamicParameter<string>(null); set => SetDynamicParameter(value); }
+        [ParameterAlias(NamelessParameterAlias), RequiredParameter]
+        public StringParameter EventName;
         /// <summary>
         /// Names of FSMs for which to broadcast the event.
         /// </summary>
-        [CommandParameter("fsm", true)]
-        public string[] FsmNames { get => GetDynamicParameter<string[]>(null); set => SetDynamicParameter(value); }
+        [ParameterAlias("fsm")]
+        public StringListParameter FsmNames;
         /// <summary>
         /// Names of game objects for which to broadcast the event. The objects should have an FSM component attached.
         /// </summary>
-        [CommandParameter("object", true)]
-        public string[] GameObjectNames { get => GetDynamicParameter<string[]>(null); set => SetDynamicParameter(value); }
+        [ParameterAlias("object")]
+        public StringListParameter GameObjectNames;
 
         public override Task ExecuteAsync (CancellationToken cancellationToken)
         {
-            if (FsmNames is null && GameObjectNames is null)
+            if (!Assigned(FsmNames) && !Assigned(GameObjectNames))
             {
                 PlayMakerFSM.BroadcastEvent(EventName);
                 return Task.CompletedTask;
             }
 
-            var fsmNames = FsmNames?.ToList();
-            var objectNames = GameObjectNames?.ToList();
+            var fsmNames = Assigned(FsmNames) ? FsmNames.ToList() : null;
+            var objectNames = Assigned(GameObjectNames) ? GameObjectNames.ToList() : null;
             foreach (var fsm in PlayMakerFSM.FsmList)
             {
                 if (objectNames != null && !objectNames.Contains(fsm.gameObject.name)) continue;

@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d763f94cb38c34eba2d7eb3eebc65d, type: 3}
+  m_Name: UIConfiguration
+  m_EditorClassIdentifier: 
+  ObjectsLayer: 5
+  RenderMode: 1
+  SortingOffset: 1
+  DefaultUI:
+  - Tooltip: 
+    TypeName: Naninovel.UI.ClickThroughPanel, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: ClickThroughPanel
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 1
+  - Tooltip: Text printer backlog panel.
+    TypeName: Naninovel.UI.IBacklogUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: IBacklogUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: CG gallery menu.
+    TypeName: Naninovel.UI.ICGGalleryUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: ICGGalleryUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: Confirmation dialogue (eg, when exiting to title or overwriting a save
+      slot).
+    TypeName: Naninovel.UI.IConfirmationUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: IConfirmationUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: A fullscreen invisible area that triggers `Continue` input when clicked
+      or touched.
+    TypeName: Naninovel.UI.IContinueInputUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: IContinueInputUI
+    Enabled: 0
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: External scripts browser (community modding feature).
+    TypeName: Naninovel.UI.IExternalScriptsUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: IExternalScriptsUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: Loading screen.
+    TypeName: Naninovel.UI.ILoadingUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: ILoadingUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: Fullscreen UI used to host video player.
+    TypeName: Naninovel.UI.IMovieUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: IMovieUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: An image indicating when state rollback is performed.
+    TypeName: Naninovel.UI.IRollbackUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: IRollbackUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: Save/load menu.
+    TypeName: Naninovel.UI.ISaveLoadUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: ISaveLoadUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: Fullscreen UI used to show a temporary render texture while scene transition
+      is performed.
+    TypeName: Naninovel.UI.ISceneTransitionUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: ISceneTransitionUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: Game settings menu.
+    TypeName: Naninovel.UI.ISettingsUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: ISettingsUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: Unlockable tips panel.
+    TypeName: Naninovel.UI.ITipsUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: ITipsUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: Title (main) menu.
+    TypeName: Naninovel.UI.ITitleUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: ITitleUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  - Tooltip: Variable input dialogue.
+    TypeName: Naninovel.UI.IVariableInputUI, Elringus.Naninovel.Runtime, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    ResourcePath: IVariableInputUI
+    Enabled: 1
+    CustomPrefab: {fileID: 0}
+    Hidden: 0
+  CustomUI: []
