@@ -1,7 +1,0 @@
-Naninovel.UI.TitleMenuManagedText.CgGalleryLabel: CG GALLERY
-Naninovel.UI.TitleMenuManagedText.ContinueLabel: CONTINUE
-Naninovel.UI.TitleMenuManagedText.ExitLabel: EXIT
-Naninovel.UI.TitleMenuManagedText.ExternalScriptsLabel: EXTERNAL SCRIPTS
-Naninovel.UI.TitleMenuManagedText.NewGameLabel: NEW GAME
-Naninovel.UI.TitleMenuManagedText.SettingsLabel: SETTINGS
-Naninovel.UI.TitleMenuManagedText.TipsLabel: TIPS

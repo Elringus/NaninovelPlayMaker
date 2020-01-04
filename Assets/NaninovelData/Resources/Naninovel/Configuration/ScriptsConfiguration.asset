@@ -15,11 +15,12 @@ MonoBehaviour:
   Loader:
     PathPrefix: Scripts
     ProviderTypes: 0000000001000000
-  GlobalDefinesScript: 
   InitializationScript: 
   TitleScript: 
-  StartGameScript: TestScript
+  StartGameScript: 
   AutoAddScripts: 1
+  HotReloadScripts: 1
+  CountTotalCommands: 0
   EnableVisualEditor: 1
   HideUnusedParameters: 1
   InsertLineKey: 32

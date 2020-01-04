@@ -1,1 +1,0 @@
-Naninovel.UI.BacklogCloseButton.LabelText: CLOSE

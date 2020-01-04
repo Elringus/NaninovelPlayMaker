@@ -1,2 +1,0 @@
-Naninovel.ConfirmationCancelButton.LabelText: NO
-Naninovel.ConfirmationConfirmButton.LabelText: YES

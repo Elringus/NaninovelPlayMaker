@@ -25,7 +25,7 @@ namespace Naninovel.PlayMaker
 
         public override void OnEnter ()
         {
-            if (!Engine.IsInitialized)
+            if (!Engine.Initialized)
             {
                 UnityEngine.Debug.LogError("Can't play script: Naninovel engine is not initialized.");
                 Finish();

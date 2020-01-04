@@ -10,7 +10,7 @@ namespace Naninovel.PlayMaker
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Initialize ()
         {
-            if (Engine.IsInitialized) HandleEngineInitialized();
+            if (Engine.Initialized) HandleEngineInitialized();
             else
             {
                 Engine.OnInitializationFinished -= HandleEngineInitialized;
