@@ -29,8 +29,8 @@ namespace Naninovel.PlayMaker
             stateMngr.OnGameLoadFinished += _ => PlayMakerFSM.BroadcastEvent("Naninovel/StateManager/OnGameLoadFinished");
 
             var scriptPlayer = Engine.GetService<ScriptPlayer>();
-            scriptPlayer.OnPlay += () => PlayMakerFSM.BroadcastEvent("Naninovel/ScriptPlayer/OnPlay");
-            scriptPlayer.OnStop += () => PlayMakerFSM.BroadcastEvent("Naninovel/ScriptPlayer/OnStop");
+            scriptPlayer.OnPlay += _ => PlayMakerFSM.BroadcastEvent("Naninovel/ScriptPlayer/OnPlay");
+            scriptPlayer.OnStop += _ => PlayMakerFSM.BroadcastEvent("Naninovel/ScriptPlayer/OnStop");
 
             var printerManager = Engine.GetService<TextPrinterManager>();
             printerManager.OnPrintTextStarted += _ => PlayMakerFSM.BroadcastEvent("Naninovel/TextPrinterManager/OnPrintTextStarted");
