@@ -1,5 +1,4 @@
 ﻿using HutongGames.PlayMaker;
-using UnityCommon;
 
 namespace Naninovel.PlayMaker
 {
