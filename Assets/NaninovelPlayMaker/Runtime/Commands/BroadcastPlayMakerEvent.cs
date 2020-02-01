@@ -1,7 +1,7 @@
 ﻿using Naninovel.Commands;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
+using UniRx.Async;
 
 namespace Naninovel.PlayMaker
 {
@@ -28,12 +28,12 @@ namespace Naninovel.PlayMaker
         [ParameterAlias("object")]
         public StringListParameter GameObjectNames;
 
-        public override Task ExecuteAsync (CancellationToken cancellationToken)
+        public override UniTask ExecuteAsync (CancellationToken cancellationToken)
         {
             if (!Assigned(FsmNames) && !Assigned(GameObjectNames))
             {
                 PlayMakerFSM.BroadcastEvent(EventName);
-                return Task.CompletedTask;
+                return UniTask.CompletedTask;
             }
 
             var fsmNames = Assigned(FsmNames) ? FsmNames.ToList() : null;
@@ -46,7 +46,7 @@ namespace Naninovel.PlayMaker
                 fsm.SendEvent(EventName);
             }
 
-            return Task.CompletedTask;
+            return UniTask.CompletedTask;
         }
     }
 }
