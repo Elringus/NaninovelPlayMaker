@@ -13,6 +13,140 @@ MonoBehaviour:
   m_Name: EditorResources
   m_EditorClassIdentifier: 
   resourceCategories:
+  - Id: TextPrinters/9c67b21b-91e4-41a7-b157-ecb75682b295
+    Resources:
+    - Name: Dialogue
+      PathPrefix: TextPrinters
+      Guid: 1bc08ccd31adff6439e97161aa6e1d8b
+  - Id: TextPrinters/6b99235f-fb21-4842-b843-ca94d3e7a5a3
+    Resources:
+    - Name: Fullscreen
+      PathPrefix: TextPrinters
+      Guid: c87cebd3f0d4f174789cd351ce9591c4
+  - Id: TextPrinters/87c48812-097b-4fec-bec6-4366051bcc0e
+    Resources:
+    - Name: Wide
+      PathPrefix: TextPrinters
+      Guid: 781828b806deb1e4cbf50ef9de41da10
+  - Id: TextPrinters/2fccc318-d280-4491-b8f9-4206037cac2e
+    Resources:
+    - Name: Chat
+      PathPrefix: TextPrinters
+      Guid: 0126b92e4ff0f564aaa7a38eae3ef6e7
+  - Id: TextPrinters/a89e377d-de75-4ce7-9437-015b4e212b55
+    Resources:
+    - Name: Bubble
+      PathPrefix: TextPrinters
+      Guid: b47d9659b2be5ee4e95a776f213c9d4b
+  - Id: TextPrinters/579022d5-6f94-41ba-ac94-52c5a6d0b933
+    Resources:
+    - Name: TMProDialogue
+      PathPrefix: TextPrinters
+      Guid: 5838611042eaced44954639c4ea4d81e
+  - Id: TextPrinters/725b5bfe-8e9f-4f6f-ba00-17fd1d512481
+    Resources:
+    - Name: TMProFullscreen
+      PathPrefix: TextPrinters
+      Guid: a2aaa417785eeca409e78c404f333ee5
+  - Id: TextPrinters/7500dd5f-58bc-4d79-9a74-53883e075789
+    Resources:
+    - Name: TMProWide
+      PathPrefix: TextPrinters
+      Guid: 7860ef40eae6a3341be02586f7edd980
+  - Id: TextPrinters/44a8b787-f8f3-4720-9891-791e6bf26415
+    Resources:
+    - Name: TMProBubble
+      PathPrefix: TextPrinters
+      Guid: 18cfa78b5fc89b745ba69d51a6a8629a
+  - Id: ChoiceHandlers/c84d735c-b5cb-412c-87b1-b06022f99238
+    Resources:
+    - Name: ButtonList
+      PathPrefix: ChoiceHandlers
+      Guid: 1f6aa29000e839c409e6a9c0704adc96
+  - Id: ChoiceHandlers/21805d5a-89d5-4245-863b-f133a5b110f1
+    Resources:
+    - Name: ButtonArea
+      PathPrefix: ChoiceHandlers
+      Guid: 4fa6d62f894ae6e4698bfa8af59e7942
+  - Id: Spawn
+    Resources:
+    - Name: Animate
+      PathPrefix: Spawn
+      Guid: 7bf06fa813bb9c34daf521998fa72ab1
+    - Name: DepthOfField
+      PathPrefix: Spawn
+      Guid: ea76638b26a915946b62907dd1e776fd
+    - Name: DigitalGlitch
+      PathPrefix: Spawn
+      Guid: be75a73ecccb90b4caa5c14edb9ac467
+    - Name: Rain
+      PathPrefix: Spawn
+      Guid: a9117e2fa90704d45b3e1461596c11ee
+    - Name: ShakeBackground
+      PathPrefix: Spawn
+      Guid: 9f56c556ba32fd54fae62347c25a8145
+    - Name: ShakeCamera
+      PathPrefix: Spawn
+      Guid: 1c5b86cf3cfbb1f44ae5641699077da4
+    - Name: ShakeCharacter
+      PathPrefix: Spawn
+      Guid: 1224d69e1592d624cbde93d0f7383d91
+    - Name: ShakePrinter
+      PathPrefix: Spawn
+      Guid: 2795040988e866646801c80024c50be1
+    - Name: Snow
+      PathPrefix: Spawn
+      Guid: 9f4e71cb27fffa04486737d2cf8d622d
+    - Name: SunShafts
+      PathPrefix: Spawn
+      Guid: c4bf810b9b6cc9f44a58fd670678ded4
+  - Id: UI
+    Resources:
+    - Name: ClickThroughPanel
+      PathPrefix: UI
+      Guid: 702c32b2de0c0784b9a66ec90601874f
+    - Name: IBacklogUI
+      PathPrefix: UI
+      Guid: 7fba909c66b25324cb77db18679c2c96
+    - Name: ICGGalleryUI
+      PathPrefix: UI
+      Guid: 71da50c8dae82bd42ba67528804e820c
+    - Name: IConfirmationUI
+      PathPrefix: UI
+      Guid: 88d03f19bcbff914ba33a7c9895e2d7c
+    - Name: IContinueInputUI
+      PathPrefix: UI
+      Guid: 1add671f8348e8443bcc56290e82fc5e
+    - Name: IExternalScriptsUI
+      PathPrefix: UI
+      Guid: 671ceb4f549ddf046913d7debf113469
+    - Name: ILoadingUI
+      PathPrefix: UI
+      Guid: 53aad00e5cf184e458adb001c550518a
+    - Name: IMovieUI
+      PathPrefix: UI
+      Guid: f9a211517d1cb1a44964dc2254463049
+    - Name: IRollbackUI
+      PathPrefix: UI
+      Guid: a32c73a3aff4b274c85b3ff16c854b07
+    - Name: ISaveLoadUI
+      PathPrefix: UI
+      Guid: 8d53726b3d08433479398f02b4780e7f
+    - Name: ISceneTransitionUI
+      PathPrefix: UI
+      Guid: e3b234b4273b7f64ab3f1d9fe425ed23
+    - Name: ISettingsUI
+      PathPrefix: UI
+      Guid: 65c37f59e9b266f468dd5381fdc03fc3
+    - Name: ITipsUI
+      PathPrefix: UI
+      Guid: f5aae572225ee1b4c96d1a17fc5cb073
+    - Name: ITitleUI
+      PathPrefix: UI
+      Guid: 4b121aa1be1b7e04480b452c595ff17a
+    - Name: IVariableInputUI
+      PathPrefix: UI
+      Guid: bb95f484e341dcd4391a572f22b7d067
   - Id: Scripts
     Resources:
     - Name: TestScript

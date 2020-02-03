@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CharactersConfiguration
   m_EditorClassIdentifier: 
   DefaultEasing: 1
+  AutoShowOnModify: 1
   SceneOrigin: {x: 0.5, y: 0}
   ZOffset: 50
   ZStep: 0.1
@@ -23,7 +24,7 @@ MonoBehaviour:
     Loader:
       PathPrefix: Characters
       ProviderTypes: 0000000001000000
-    guid: effc3aaa-3984-4ed5-a771-cfd675af65a3
+    guid: 9e71516f-1506-4812-9382-5115b51b7197
     Pivot: {x: 0.5, y: 0}
     PixelsPerUnit: 100
     EnableDepthPass: 1
@@ -42,6 +43,8 @@ MonoBehaviour:
     HighlightDuration: 0.35
     HighlightEasing: 1
     MessageSound: 
+    LinkedPrinter: 
+    Poses: []
   Metadata:
     ids: []
     metas: []
