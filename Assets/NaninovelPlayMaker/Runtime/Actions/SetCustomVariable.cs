@@ -25,6 +25,8 @@ namespace Naninovel.PlayMaker
             if (customVarManager is null) { Finish(); return; }
 
             customVarManager.SetVariableValue(VariableName.Value, VariableValue.Value);
+
+            Finish();
         }
     }
 }
