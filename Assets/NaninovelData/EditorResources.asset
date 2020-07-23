@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
@@ -207,3 +207,8 @@ MonoBehaviour:
     - Name: Dialogue
       PathPrefix: TextPrinters
       Guid: 1bc08ccd31adff6439e97161aa6e1d8b
+  - Id: Audio
+    Resources:
+    - Name: Keystroke
+      PathPrefix: Audio
+      Guid: 9ee70ddbb15eb6e4aae42c0901ed5bbc
