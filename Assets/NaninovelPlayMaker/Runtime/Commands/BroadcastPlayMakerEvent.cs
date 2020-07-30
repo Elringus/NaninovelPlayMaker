@@ -1,6 +1,5 @@
 ﻿using Naninovel.Commands;
 using System.Linq;
-using System.Threading;
 using UniRx.Async;
 
 namespace Naninovel.PlayMaker
