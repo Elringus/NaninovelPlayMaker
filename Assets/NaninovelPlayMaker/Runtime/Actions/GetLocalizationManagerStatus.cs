@@ -27,7 +27,7 @@ namespace Naninovel.PlayMaker
             var localizationManager = Engine.GetService<LocalizationManager>();
             if (localizationManager is null) { Finish(); return; }
 
-            SourceLocaleSelected.Value = localizationManager.SourceLocaleSelected();
+            SourceLocaleSelected.Value = localizationManager.IsSourceLocaleSelected();
             SourceLocale.Value = Engine.GetConfiguration<LocalizationConfiguration>().SourceLocale;
             SelectedLocale.Value = localizationManager.SelectedLocale;
 

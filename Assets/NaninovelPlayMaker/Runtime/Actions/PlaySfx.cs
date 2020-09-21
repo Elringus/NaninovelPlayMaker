@@ -54,7 +54,7 @@ namespace Naninovel.PlayMaker
         {
             var audioManager = Engine.GetService<AudioManager>();
 
-            await audioManager.HoldAudioResourcesAsync(this, SfxName.Value);
+            await audioManager.AudioLoader.LoadAndHoldAsync(SfxName.Value, this);
 
             if (Fast.Value) audioManager.PlaySfxFast(SfxName.Value, Volume.Value);
             else await audioManager.PlaySfxAsync(SfxName.Value, Volume.Value, FadeTime.Value, Loop.Value);
@@ -67,7 +67,7 @@ namespace Naninovel.PlayMaker
         {
             base.OnExit();
 
-            Engine.GetService<AudioManager>()?.ReleaseAudioResources(this, SfxName.Value);
+            Engine.GetService<AudioManager>()?.AudioLoader?.Release(SfxName.Value, this);
         }
     }
 }
