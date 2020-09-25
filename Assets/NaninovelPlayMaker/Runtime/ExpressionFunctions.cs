@@ -1,6 +1,6 @@
 ﻿using HutongGames.PlayMaker;
 
-namespace Naninovel.PlayMaker
+namespace Naninovel
 {
     [ExpressionFunctions]
     public static class ExpressionFunctions
