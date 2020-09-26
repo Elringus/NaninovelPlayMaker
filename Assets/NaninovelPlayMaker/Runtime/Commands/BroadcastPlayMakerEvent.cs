@@ -1,7 +1,8 @@
-﻿using System.Linq;
+﻿using Naninovel.Commands;
+using System.Linq;
 using UniRx.Async;
 
-namespace Naninovel.Commands
+namespace Naninovel.PlayMaker
 {
     /// <summary>
     /// Broadcasts a PlayMaker event with the provided name.
@@ -26,7 +27,7 @@ namespace Naninovel.Commands
         [ParameterAlias("object")]
         public StringListParameter GameObjectNames;
 
-        public override UniTask ExecuteAsync (CancellationToken cancellationToken = default)
+        public override UniTask ExecuteAsync (CancellationToken cancellationToken)
         {
             if (!Assigned(FsmNames) && !Assigned(GameObjectNames))
             {

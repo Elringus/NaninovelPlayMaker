@@ -1,7 +1,8 @@
 ﻿using HutongGames.PlayMaker;
+using Naninovel.Commands;
 using UniRx.Async;
 
-namespace Naninovel.Commands
+namespace Naninovel.PlayMaker
 {
     /// <summary>
     /// Sets a global playmaker variable with the provided name.
@@ -25,7 +26,7 @@ namespace Naninovel.Commands
         [ParameterAlias("index")]
         public IntegerParameter ArrayIndex;
 
-        public override UniTask ExecuteAsync (CancellationToken cancellationToken = default)
+        public override UniTask ExecuteAsync (CancellationToken cancellationToken)
         {
             var value = CustomVariablesConfiguration.ParseVariableValue(VariableValue);
 
