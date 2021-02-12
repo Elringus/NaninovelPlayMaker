@@ -21,14 +21,15 @@ namespace Naninovel.PlayMaker
 
         private async void DoAsync ()
         {
-            if (string.IsNullOrEmpty(CommandText.Value)) { Finish(); return; }
+            if (string.IsNullOrEmpty(CommandText.Value))
+            {
+                Finish();
+                return;
+            }
 
-            var commandBodyText = CommandText.Value.GetAfterFirst(CommandScriptLine.IdentifierLiteral).Trim();
-            var command = Commands.Command.FromScriptText(string.Empty, 0, 0, commandBodyText, out var errors);
-            if (command is null || !string.IsNullOrEmpty(errors)) { Finish(); return; }
-
-            if (command.ShouldExecute)
-                await command.ExecuteAsync();
+            var script = Script.FromScriptText("PlayMaker", CommandText.Value);
+            var playlist = new ScriptPlaylist(script);
+            await playlist.ExecuteAsync();
 
             Finish();
         }
